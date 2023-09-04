@@ -1,0 +1,26 @@
+{
+  "name": "manage-landing-page",
+  "version": "1.0.0",
+  "description": "![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "watch": "sass --watch style.scss:style.css",
+    "dev": "webpack-dev-server --inline --hot",
+    "build": "webpack -p",
+    "test": "karma start"
+  },
+  "author": "Jeremy Helsel",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^4.3.5",
+    "jasmine-core": "^5.1.1",
+    "karma": "^6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-jasmine": "^5.1.0",
+    "karma-webpack": "^5.0.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
