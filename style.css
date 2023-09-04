@@ -1,3 +1,143 @@
+html {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  box-sizing: border-box;
+  margin-top: 45px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: none;
+}
+
+main {
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+main > section.section-one {
+  display: flex;
+  flex-direction: column-reverse;
+}
+main > section.section-one div {
+  text-align: center;
+}
+main > section.section-one div button {
+  width: 137px;
+  height: 44px;
+}
+main > section.section-one img {
+  width: 100%;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+ol li div {
+  display: flex;
+  align-items: center;
+}
+ol li div span,
+ol li div p {
+  box-sizing: border-box;
+  padding: 6px 0 10px 0;
+}
+ol li div span {
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 22px;
+  background-color: #F3603C;
+  color: #FFF0EC;
+}
+
+h1 {
+  color: #242D52;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -1px;
+}
+
+p {
+  color: #242D52;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+button {
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  background-color: #F3603C;
+  color: #FFF0EC;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.hamburger {
+  border-radius: 0;
+  background: none;
+  width: 25px;
+  height: 12px;
+  box-sizing: content-box;
+  padding: 4px;
+  position: relative;
+}
+.hamburger div {
+  height: 4px;
+  width: 25px;
+  background-color: #242D52;
+  position: absolute;
+}
+.hamburger .top {
+  top: 0;
+}
+.hamburger .middle {
+  top: calc(50% - 2px);
+}
+.hamburger .bottom {
+  bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  main {
+    background-image: url("./images/bg-tablet-pattern.svg");
+    background-size: 85%;
+    background-repeat: repeat-y;
+    background-position-x: 300%;
+    background-position-y: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+  main > section.section-one {
+    flex-direction: row;
+    align-items: center;
+  }
+  main > section.section-one > div,
+  main > section.section-one > img {
+    width: 50%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

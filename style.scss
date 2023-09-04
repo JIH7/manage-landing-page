@@ -1,0 +1,179 @@
+$orange: #F3603C;
+$darkblue: #242D52;
+$black: #1D1E25;
+$wheat: #FFF0EC;
+
+html {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// Organizational elements
+
+header {
+    box-sizing: border-box;
+    margin-top: 45px;
+    padding: 0 24px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: none;
+}
+
+main {
+    box-sizing: border-box;
+    padding: 0 16px;
+
+    > section.section-one {
+        display: flex;
+        flex-direction: column-reverse;
+
+        div {
+            text-align: center;
+
+            button {
+                width: 137px;
+                height: 44px;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+
+    li {
+        div {
+            
+
+            display: flex;
+            align-items: center;
+
+            span,
+            p {
+                box-sizing: border-box;
+                padding: 6px 0 10px 0;
+            }
+
+            span {
+                padding-left: 24px;
+                padding-right: 24px;
+
+                border-radius: 22px;
+
+                background-color: $orange;
+                color: $wheat;
+            }
+        }
+    }
+}
+
+// Sub elements
+h1 {
+    color: $darkblue;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: -1px;
+}
+
+p {
+    color: $darkblue;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+button {
+    border-radius: 22px;
+    outline: none;
+    border: none;
+    background-color: $orange;
+
+    color: $wheat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.hamburger {
+    border-radius: 0;
+    background: none;
+
+    width: 25px;
+    height: 12px;
+
+    box-sizing: content-box;
+    padding: 4px;
+
+    position: relative;
+
+    div {
+        height: 4px;
+        width: 25px;
+
+        background-color: $darkblue;
+
+        position: absolute;
+    }
+
+    .top {
+        top: 0;
+    }
+
+    .middle {
+        top: calc(50% - 2px)
+    }
+
+    .bottom {
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        background-image: url("./images/bg-tablet-pattern.svg");
+        background-size: 85%;
+        background-repeat: repeat-y;
+        background-position-x: 300%;
+        background-position-y: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    main {
+        > section.section-one {
+            flex-direction: row;
+            align-items: center;
+
+            > div,
+            > img {
+                width: 50%;
+            }
+        }
+    }
+}
